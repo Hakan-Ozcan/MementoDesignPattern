@@ -1,0 +1,12 @@
+﻿Memento tasarım deseni, bir nesnenin durumunu kaydederek ve istenildiğinde geri yükleyerek nesnenin geçmiş durumlarına erişim sağlayan bir davranışsal 
+tasarım desenidir. Bu desen, nesnenin durumunun farklı zamanlarda geri alınabilmesi gereken durumlarda kullanılır.
+Memento deseni, nesnenin durumunu nesnenin kendisi dışında başka bir nesne olan "Memento" nesnesine saklayarak, geri alınabilirlik özelliği sağlar.
+
+Memento deseninde temel unsurlar şunlardır:
+
+Originator (Oluşturucu): Durumu kaydedilecek olan nesnedir.
+Memento: Originator nesnesinin durumunu temsil eden nesnedir.
+Caretaker (Koruyucu): Memento nesnelerini saklar ve geri yükleme işlemlerini yönetir.
+Bu örnekte, TextEditor sınıfı metin düzenleyicisini temsil ederken, TextEditorMemento sınıfı metin düzenleyicisinin durumunu
+temsil eden memento nesnesini oluşturur. TextEditorHistory sınıfı ise geri alma (undo) ve ileri alma (redo) işlemlerini yönetir ve memento nesnelerini saklar.
+Kullanıcı TextEditorHistory üzerinden metin düzenleyicisinin durumunu kaydedebilir (Save), geri alabilir (Undo) ve ileri alabilir (Redo).
